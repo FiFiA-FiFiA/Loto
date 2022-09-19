@@ -43,8 +43,10 @@ function starting__board() {
 let input__arr = [];
 
 function check__number() {
-  if (input.value <= 36 && input.value != "") {
-    input__arr.push(input.value)
+  if (input.value <= 36 && input.value != "" && input.value > 0) {
+    if (input__arr.indexOf(input.value) == -1) {
+      input__arr.push(input.value);
+    }
   } else {
     input.value = "";
     input.focus();
